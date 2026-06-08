@@ -2,21 +2,13 @@ import { useState } from "react";
 import { TOURNAMENT } from "./data/worldcup";
 import Standings from "./components/Standings";
 import Schedule from "./components/Schedule";
+import Bracket from "./components/Bracket";
 
 const TABS = [
   { id: "standings", label: "Standings" },
   { id: "schedule", label: "Schedule" },
   { id: "bracket", label: "Bracket" },
 ];
-
-function ComingSoon({ label }) {
-  return (
-    <div className="flex flex-col items-center justify-center py-24 text-center">
-      <p className="text-slate-300 text-lg font-medium">{label}</p>
-      <p className="text-slate-500 text-sm mt-1">Coming next in the build.</p>
-    </div>
-  );
-}
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("standings");
@@ -68,7 +60,7 @@ export default function App() {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
         {activeTab === "standings" && <Standings />}
         {activeTab === "schedule" && <Schedule />}
-        {activeTab === "bracket" && <ComingSoon label="Knockout Bracket" />}
+        {activeTab === "bracket" && <Bracket />}
       </main>
     </div>
   );
