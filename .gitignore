@@ -1,0 +1,30 @@
+# Frontend (React + Vite)
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.env.local
+frontend/.env.*.local
+frontend/.vite/
+
+# Backend (Spring Boot)
+backend/target/
+backend/.settings/
+backend/.env
+backend/application-local.properties
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
