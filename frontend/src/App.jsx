@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { TOURNAMENT } from "./data/worldcup";
 import Standings from "./components/Standings";
+import Schedule from "./components/Schedule";
 
 const TABS = [
   { id: "standings", label: "Standings" },
@@ -66,7 +67,7 @@ export default function App() {
       {/* Main content */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
         {activeTab === "standings" && <Standings />}
-        {activeTab === "schedule" && <ComingSoon label="Match Schedule" />}
+        {activeTab === "schedule" && <Schedule />}
         {activeTab === "bracket" && <ComingSoon label="Knockout Bracket" />}
       </main>
     </div>
